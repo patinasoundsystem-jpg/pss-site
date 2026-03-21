@@ -378,7 +378,11 @@
         const subject = $('#subject')?.value?.trim() || 'Inquiry — Patina Sound System';
         const message = $('#message')?.value?.trim() || '';
         const body = encodeURIComponent(
-`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+`Name: ${name}
+Email: ${email}
+
+Message:
+${message}`
         );
         location.href = `mailto:patina.soundsystem@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
       });
