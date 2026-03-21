@@ -10,6 +10,7 @@
       --bg:#ffffff; --fg:#111111; --muted:#6b6b6b; --line:#e6e6e6;
       --max:1200px; --sidebar:320px; --pad:22px; --radius:6px;
       --font: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans KR", Helvetica, Arial, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+      --display: "Inter", "SF Pro Display", "Helvetica Neue", Arial, sans-serif;
       --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     }
     *{ box-sizing:border-box; }
@@ -57,7 +58,13 @@
 
     .content{ padding: calc(var(--pad) + 6px); min-width:0; }
     .header{ display:flex; align-items:flex-start; justify-content:space-between; gap:16px; margin-bottom:18px; }
-    .h1{ font-size:20px; font-weight:650; letter-spacing:-0.1px; margin:0; }
+    .h1{
+      font-family:var(--display);
+      font-size:22px;
+      font-weight:600;
+      letter-spacing:-0.2px;
+      margin:0;
+    }
     .sub{ margin:10px 0 0 0; color:var(--muted); max-width: 72ch; font-size:13.5px; }
 
     .hero-image{
@@ -71,7 +78,13 @@
       filter:none;
     }
 
-    .kicker{ font-family:var(--mono); font-size:12px; color:var(--muted); text-transform:uppercase; letter-spacing:0.8px; }
+    .kicker{
+      font-family:var(--mono);
+      font-size:11.5px;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
 
     .card{ border:1px solid var(--line); border-radius:0; padding:0; background:transparent; }
     .grid{ display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin-top:18px; }
@@ -80,7 +93,11 @@
     .list{ display:flex; flex-direction:column; gap:10px; }
     .item{ display:flex; gap:14px; align-items:flex-start; justify-content:space-between; padding:12px 0; border-radius:0; border:0; border-bottom:1px solid var(--line); }
     .item:hover{ background:transparent; }
-    .item .title{ font-weight:650; }
+    .item .title{
+      font-family:var(--display);
+      font-weight:600;
+      letter-spacing:-0.1px;
+    }
     .item .right{ text-align:right; color:var(--muted); font-family:var(--mono); font-size:12px; min-width: 110px; }
 
     .btn{ display:inline-flex; align-items:center; gap:8px; padding:0; border-radius:0; border:0; background:transparent; cursor:pointer; font-weight:650; text-decoration:underline; text-underline-offset:3px; }
@@ -127,27 +144,7 @@
   <div class="mobileTop">
     <div class="row">
       <a class="rotLogo" href="#/" aria-label="Patina Sound System — Home" style="width:72px;height:72px;flex:0 0 72px;">
-        <svg viewBox="0 0 100 100" role="img" aria-label="Patina Sound System circular logo">
-          <defs>
-            <path id="circlePath" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
-          </defs>
-          <defs>
-            <filter id="waveDistort">
-              <!-- softer analog wave like printed distortion -->
-              <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="2" result="turb"/>
-              <feDisplacementMap in="SourceGraphic" in2="turb" scale="9" xChannelSelector="R" yChannelSelector="G"/>
-              <feGaussianBlur stdDeviation="0.2"/>
-            </filter>
-          </defs>
-          <g class="ring" filter="url(#waveDistort)">
-            <text>
-              <textPath href="#circlePath" startOffset="50%" text-anchor="middle" textLength="213" lengthAdjust="spacing">
-                PATINA SOUND SYSTEM
-              </textPath>
-            </text>
-          </g>
-          <circle cx="50" cy="50" r="2.3" fill="var(--fg)" />
-        </svg>
+        <img src="data:image/webp;base64,UklGRsIJAABXRUJQVlA4ILYJAADwMQCdASq0ALsAPm00lUikIqIhIzSaoIANiWlu4XEhxj/SH+49oP+OT+bP9x7WPcPmfzV/tPdx7WPbx7T8e/2nu490/tY9vHt4f7j2se3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j2AAdcAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA==" alt="Patina Sound System" style="width:100%;height:auto;display:block;" />
       </a>
       
       <button class="btn" data-drawer-toggle aria-expanded="false" aria-controls="drawer">Menu</button>
@@ -167,27 +164,7 @@
     <aside class="sidebar">
       <div class="brand">
         <a class="rotLogo" href="#/" aria-label="Patina Sound System — Home">
-          <svg viewBox="0 0 100 100" role="img" aria-label="Patina Sound System circular logo">
-          <defs>
-            <path id="circlePath" d="M50,50 m-34,0 a34,34 0 1,1 68,0 a34,34 0 1,1 -68,0" />
-          </defs>
-          <defs>
-            <filter id="waveDistort">
-              <!-- softer analog wave like printed distortion -->
-              <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" seed="2" result="turb"/>
-              <feDisplacementMap in="SourceGraphic" in2="turb" scale="9" xChannelSelector="R" yChannelSelector="G"/>
-              <feGaussianBlur stdDeviation="0.2"/>
-            </filter>
-          </defs>
-          <g class="ring" filter="url(#waveDistort)">
-            <text>
-              <textPath href="#circlePath" startOffset="50%" text-anchor="middle" textLength="213" lengthAdjust="spacing">
-                PATINA SOUND SYSTEM
-              </textPath>
-            </text>
-          </g>
-          <circle cx="50" cy="50" r="2.3" fill="var(--fg)" />
-        </svg>
+          <img src="data:image/webp;base64,UklGRsIJAABXRUJQVlA4ILYJAADwMQCdASq0ALsAPm00lUikIqIhIzSaoIANiWlu4XEhxj/SH+49oP+OT+bP9x7WPcPmfzV/tPdx7WPbx7T8e/2nu490/tY9vHt4f7j2se3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j28e3j2AAdcAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA/v/DuAAP7/w7gAD+/8O4AA==" alt="Patina Sound System" style="width:100%;height:auto;display:block;" />
         </a>
         
       </div>
@@ -217,8 +194,9 @@
         <div class="header">
           <div>
             <p class="kicker">Patina Sound System</p>
-            <h1 class="h1">A sound system with patina.</h1>
-            <p class="sub">Listening sessions by day, disco & house by night. Minimal, warm, and loud—built around classic hi‑fi.</p>
+            <h1 class="h1">“잘 길들여진 빈티지 스피커는 단번에 티가 난다.”</h1>
+            <p class="sub">우리는 음악을 소비하는 공간이 아니라 취향이 축적이 되는 구조를 만드는 서울 기반 문화 스튜디오입니다.</p>
+            <p class="sub">‘Patina’는 시간이 만들어낸 깊이와 결을 의미합니다. 클립쉬 라 스칼라(Klipsch La Scala)와 매킨토시(McIntosh) 앰프, 그리고 아날로그 로터리 믹서가 결합된 우리의 빈티지 하이파이 오디오 시스템은 단순한 물리적 장비의 합이 아닙니다. 끊임없이 자극을 쏟아내는 경직되고 긴장된 현대 사회 속에서, 이 Full Analog System이 뿜어내는 사운드는 귀를 찌르는 피로감 대신 해상도 높은 따뜻함으로 공간을 가득 채웁니다. 아날로그 특유의 묵직한 질감과 입체적인 소리는 방문객들의 잔뜩 웅크렸던 감각을 무장해제시키고 편안하게 귀를 열어줍니다.</p>
           </div>
           <div style="display:flex; gap:14px; flex-wrap:wrap; align-items:flex-start; font-family:var(--mono); font-size:12px; color:var(--muted);">
             <a class="btn" href="https://www.instagram.com/patina.soundsystem?igsh=MXV4ZXZyMjhhMXpmdA%3D%3D&amp;utm_source=qr">Instagram</a>
@@ -229,66 +207,7 @@
 
         <!-- HERO IMAGE (La Scala style) -->
         <div class="hero-image">
-  <svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;display:block;background:#e9e9e9">
-    <defs>
-      <!-- aggressive grain -->
-      <filter id="roughNoise">
-        <feTurbulence type="fractalNoise" baseFrequency="1.8" numOctaves="5" stitchTiles="stitch" result="noise"/>
-        <feColorMatrix type="saturate" values="0"/>
-        <feComponentTransfer>
-          <feFuncR type="linear" slope="1.8"/>
-          <feFuncG type="linear" slope="1.8"/>
-          <feFuncB type="linear" slope="1.8"/>
-        </feComponentTransfer>
-      </filter>
-
-      <!-- heavy distortion for speakers -->
-      <filter id="speakerDistort">
-        <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" result="turb"/>
-        <feDisplacementMap in="SourceGraphic" in2="turb" scale="35" xChannelSelector="R" yChannelSelector="G"/>
-      </filter>
-
-      <!-- high contrast boost -->
-      <filter id="contrastBoost">
-        <feComponentTransfer>
-          <feFuncR type="linear" slope="1.6" intercept="-0.3"/>
-          <feFuncG type="linear" slope="1.6" intercept="-0.3"/>
-          <feFuncB type="linear" slope="1.6" intercept="-0.3"/>
-        </feComponentTransfer>
-      </filter>
-    </defs>
-
-    <!-- dirty paper base -->
-    <rect width="1200" height="700" fill="#efefef"/>
-    <rect width="1200" height="700" filter="url(#roughNoise)" opacity="0.45"/>
-
-    <!-- LEFT LA SCALA (harder blacks) -->
-    <g transform="translate(220,110)" filter="url(#speakerDistort)">
-      <rect x="0" y="0" width="260" height="480" fill="#000" filter="url(#roughNoise)"/>
-      <rect x="30" y="40" width="200" height="120" fill="#000"/>
-      <polygon points="30,210 230,210 180,340 80,340" fill="#000"/>
-      <rect x="60" y="380" width="140" height="80" fill="#000"/>
-    </g>
-
-    <!-- RIGHT LA SCALA -->
-    <g transform="translate(720,110)" filter="url(#speakerDistort)">
-      <rect x="0" y="0" width="260" height="480" fill="#000" filter="url(#roughNoise)"/>
-      <rect x="30" y="40" width="200" height="120" fill="#000"/>
-      <polygon points="30,210 230,210 180,340 80,340" fill="#000"/>
-      <rect x="60" y="380" width="140" height="80" fill="#000"/>
-    </g>
-
-    <!-- subtle misprint offset effect -->
-    <g opacity="0.08">
-      <rect x="215" y="105" width="270" height="490" fill="#000"/>
-      <rect x="715" y="105" width="270" height="490" fill="#000"/>
-    </g>
-
-    <!-- aggressive mono typography -->
-    <text x="600" y="640" text-anchor="middle" font-family="monospace" font-size="15" fill="#222" letter-spacing="4">
-      PATINA SOUND SYSTEM — LA SCALA — SEOUL
-    </text>
-  </svg>
+  <img src="data:image/webp;base64,UklGRjbWAABXRUJQVlA4ICrWAABw8QWdASqwBN0FPqlQok4mJCqpIbQKMVAVCWdLJ7qeDf/+fj7T/9r0Yk4j4W2utIoU9QSu2v7EpfP7Q83fNkAUdP2QO8tVu11P5hYw+eVZHk+YxE2v8g7bM3r0mrd5qv9iSgk8f1W0bo8qQxQJ2bQ0d5g7qH8mXg4l7U2i0z2mX2mN2xLe6U8z+N1b0um7n1k8A5jv1j9m8y1pA5wqk7QAn7uQ4l1eM4bDLGqX7cB8Lz+XrM8I3tQYd8vN8w6eYbQ5s/1KJ2hR3fVQ3U2gSlqX3Q7FfNQm0d9cE3C7uJ0N7M1p4pQkKzj7mWJcG9Jw3tXx2z0JkV1sK7YJb8k4ZyT4mKQ9r6N4W9WkQv+7iV0Qw3z3AIt2t9f8p7V5S8m8p/9r+V4WJQ3U4m8p8zH4y4xkQm5X9cH4jv3rKk7k8K1Vg2r5Qw5mYyB8pGm7Qw6r2Y9f0lqj8P8s8z7nQb7tY0M4p2A4Vt0vQmD1b/5E8QwMZs7Jv6+4Y3m+AK6l3dS3z+3Y6v8s9N2Z5s/9p5m3q8f0H2w9m4m3t6N7p8j7o7Y9C+Y6m1G2d7L8l7d9o3W+6H8A+2A1k1y5kQ9R7Cq7F5G7D7r+M5m0M5l3D6u6mG+1zvL5f6rF5x6m8c9r8b+F0S8V4f1p8X2m5M7W6K3L3r9o8u8B6H3k7t7N7t7c7b7a7Y7X7V7T7R7P7N7L7J7H7F7D7B7/6v/5u/4t/3s/2r/1q/0p/zn/yW/wV/vU/uT/tS/sR/rQ/qP/pO/oN/nM/mL/lK/kJ/jI/iH/hG/gF/fE/eD/dC/cB/bA/a/9o/8n/7m/6l/5j/4h/3f/2d/1b/0Z/zX/yV/wT/vR/uP/tN/sL/rJ/qH/pF/oD/nB/m//k/+i/+f/+d/+b/+Z/+X/+V/+T/+R/+P/+N/+L/+J/+H/+F/+D/+B/+AACHd8m8J5S0+g2Yg7rZ2xGJr1m7i9rS7V0l4H5Jq5s7v8D9T7M0o4cY0Z0c7mF0dQ8mL0bB3gV1hN7rL6vY8x9b3nQ5o8S9sW7wM6uV3uN4m2xj0mM0kR8vW4Yd7f3p6q9L6f6i7c8n6Y5e4c3a2Y1W0U0S0Q0O0M0K0I0G0E0C0A0AA==" alt="Patina Hero" style="width:100%;height:auto;display:block;" />
 </div>
 
         <section class="card" style="border-left:0;border-right:0;">
@@ -305,7 +224,7 @@
                 <div class="right">Contact</div>
               </a>
 
-              <a class="item" href="https://www.instagram.com/patina.soundsystem?igsh=MXV4ZXZyMjhhMXpmdA%3D%3D&amp;utm_source=qr">
+              <a class="item" href="https://www.instagram.com/patina.soundsystem?igsh=MXV4ZXZyMjhhMXpmdA%3D%3D&amp;utm_source=qr" target="_blank" rel="noopener">
                 <div>
                   <div class="title">Latest photos & clips</div>
                   <div style="color:var(--muted); margin-top:4px;">Setups, parties, and behind‑the‑scenes.</div>
@@ -314,14 +233,30 @@
               </a>
             </div>
 
-            <div style="border-top:1px solid var(--line); padding-top:14px; margin-top:14px;">
+            <div style="border-top:1px solid var(--line); padding-top:18px; margin-top:18px;">
               <p class="kicker" style="margin:0;">System</p>
               <div class="hr"></div>
-              <div style="display:grid; gap:8px;">
-                <div>• Klipsch La Scala (x4)</div>
-                <div>• McIntosh amplification</div>
-                <div>• Technics SL‑1200 series</div>
-                <div>• Flexible routing for venues</div>
+
+              <div style="display:grid; gap:18px; max-width:720px;">
+
+                <div style="border-left:2px solid #111; padding-left:12px;">
+                  <div style="font-family:var(--mono); font-size:12px; color:var(--muted); margin-bottom:6px;">Core Components</div>
+                  <div style="font-weight:600;">Klipsch La Scala (4ea)</div>
+                  <div style="font-size:12px; color:var(--muted); margin-top:4px;">4개 유닛의 압도적인 혼 스피커 구성으로 리스닝 룸을 가득 채우는 사운드 스테이지</div>
+
+                  <div style="margin-top:10px; font-weight:600;">McIntosh MC 2255 (2ea)</div>
+                  <div style="font-size:12px; color:var(--muted); margin-top:4px;">매킨토시 특유의 블루 와트미터가 선사하는 시각적 미학과 안정적인 구동력</div>
+                </div>
+
+                <div style="border-left:2px solid #111; padding-left:12px;">
+                  <div style="font-family:var(--mono); font-size:12px; color:var(--muted); margin-bottom:6px;">DJing & Analog Source</div>
+                  <div style="font-weight:600;">Technics SL-1200 MK5 (2ea)</div>
+                  <div style="font-size:12px; color:var(--muted); margin-top:4px;">전 세계 DJ들의 표준이자, 견고한 디자인</div>
+
+                  <div style="margin-top:10px; font-weight:600;">ARS 9100BW (Rotary Mixer)</div>
+                  <div style="font-size:12px; color:var(--muted); margin-top:4px;">정교한 아날로그 질감을 표현하는 로터리 믹서로, 전체 시스템의 음악적 깊이를 완성</div>
+                </div>
+
               </div>
             </div>
           </div>
@@ -345,9 +280,21 @@
             <div class="item">
               <div>
                 <div class="title">Itaewon Graphic Party</div>
-                <div style="color:var(--muted); margin-top:4px;">April 11 — 3PM to 6PM</div>
+                <div style="color:var(--muted); margin-top:4px;">April 11 — 11AM to 8PM</div>
                 <div style="margin-top:6px; font-size:13px;">
                   A daytime vinyl session blending graphic culture and warm analog textures.
+                </div>
+                <div style="margin-top:10px; font-size:13px;">
+                  <div style="font-weight:600; margin-bottom:6px;">DJ Lineup</div>
+                  <div style="display:grid; gap:4px; font-family:var(--mono); font-size:12px; color:var(--muted);">
+                    <div>11:00 — Pre Listening</div>
+                    <div>12:00 — Feroto</div>
+                    <div>13:30 — Youngisland</div>
+                    <div>15:00 — Cityboy from Seoul</div>
+                    <div>16:30 — Masuo</div>
+                    <div>18:00 — Gio</div>
+                    <div>19:30 — All DJs</div>
+                  </div>
                 </div>
                 <div style="margin-top:8px; font-size:13px;">
                   <button class="btn" data-map="https://maps.google.com/maps?q=Itaewon+Graphic&output=embed">View Map →</button>
@@ -402,23 +349,19 @@
             </div>
 
             <div>
-              우리는 음악을 소비하는 공간이 아니라 취향이 축적이 되는 구조를 만드는 서울 기반 문화 스튜디오입니다.
+              Patina Sound System은 낮과 밤의 흐름을 분리된 이벤트가 아닌, 하나의 축적된 경험으로 설계합니다.
             </div>
 
             <div>
-              ‘Patina’는 시간이 만들어낸 깊이와 결을 의미합니다. 클립쉬 라 스칼라(Klipsch La Scala)와 매킨토시(McIntosh) 앰프, 그리고 아날로그 로터리 믹서가 결합된 우리의 빈티지 하이파이 오디오 시스템은 단순한 물리적 장비의 합이 아닙니다. 끊임없이 자극을 쏟아내는 경직되고 긴장된 현대 사회 속에서, 이 Full Analog System이 뿜어내는 사운드는 귀를 찌르는 피로감 대신 해상도 높은 따뜻함으로 공간을 가득 채웁니다. 아날로그 특유의 묵직한 질감과 입체적인 소리는 방문객들의 잔뜩 웅크렸던 감각을 무장해제시키고 편안하게 귀를 열어줍니다.
+              Daytime에는 리스닝 세션, 커뮤니티 기반 프로그램, 그리고 음악적 아카이빙을 중심으로 조용하고 깊이 있는 교류의 구조를 만들어갑니다. 이 시간은 단순한 운영이 아니라, 취향과 사운드가 쌓여가는 축적의 과정입니다.
             </div>
 
             <div>
-              또한, Patina Sound System은 특정 베뉴에만 머물러 있지 않습니다. 멈춰있는 물리적 공간의 제약을 넘어, 우리의 사운드와 철학이 필요한 곳이라면 어디든 찾아갑니다. 더 많은 사람들에게 타협 없는 좋은 취향과 새로운 청각적 경험을 제공하기 위해, 다양한 장소와 시간을 투어하며 씬(Scene)을 만들어가는 유기적인 팀입니다.
+              Nighttime에는 디스코와 하우스를 중심으로 한 에너지 있는 퍼포먼스를 통해 공간의 움직임을 이끌어냅니다. 낮 동안 축적된 셀렉션과 커뮤니티의 흐름은 밤의 파티로 자연스럽게 확장되며, 이벤트는 목적이 아닌 결과로서 완성됩니다.
             </div>
 
             <div>
-              우리의 DJ와 큐레이터들은 가벼운 트렌드가 아닌, 신뢰할 수 있는 취향을 기준으로 사운드를 셀렉션합니다. 우리는 단기적인 결과가 아니라, 시간이 흐를수록 축적되고 신뢰가 쌓이는 과정 자체를 만듭니다.
-            </div>
-
-            <div style="font-weight:700;">
-              저희는 트렌드 보다 취향을 믿습니다.
+              Public Records가 보여주듯, Patina Sound System은 낮의 축적이 밤의 경험을 완성하는 구조를 지향합니다.
             </div>
 
           </div>
@@ -430,8 +373,8 @@
         <div class="header">
           <div>
             <p class="kicker">Contact</p>
-            <h1 class="h1">Let’s talk.</h1>
-            <p class="sub">행사 일정, 장소 규모, 원하는 사운드 성향을 적어주면 빠르게 견적/가능 여부 답할게.</p>
+            <h1 class="h1">Let’s connect.</h1>
+            <p class="sub">행사의 성격과 규모, 공간의 조건, 그리고 지향하는 사운드에 대해 알려주시면 Patina Sound System만의 기준으로 가장 적합한 제안을 드립니다.</p>
           </div>
         </div>
 
@@ -441,7 +384,7 @@
 
           <div style="display:grid; gap:14px;">
             <div style="display:grid; gap:8px;">
-              <div><strong>Email</strong> — <a href="mailto:patina-sound@gmail.com">patina-sound@gmail.com</a></div>
+              <div><strong>Email</strong> — <a href="mailto:patina.soundsystem@gmail.com">patina.soundsystem@gmail.com</a></div>
               <div><strong>Instagram</strong> — <a href="https://www.instagram.com/patina.soundsystem?igsh=MXV4ZXZyMjhhMXpmdA%3D%3D&amp;utm_source=qr">Open profile →</a></div>
               <div><strong>Base</strong> — Seoul, KR</div>
             </div>
@@ -574,7 +517,7 @@
           const message = (document.getElementById('message')?.value || '').trim();
 
           const body = [`Name: ${name}`, `Email: ${email}`, '', message].join('\n');
-          const mailto = `mailto:patina-sound@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          const mailto = `mailto:patina.soundsystem@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
           location.href = mailto;
         });
       }
